@@ -1,0 +1,25 @@
+ol {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    li {
+        padding-block: 1.5rem;
+        background-color: #f6f6f6;
+        box-shadow: 0px 4px 15px 0px #00000026;
+        border-radius: 20px;
+        position: relative;
+        max-width: 322px;
+
+        i {
+            color: #7E7E7E;
+            padding-inline: 2.2rem;
+        }
+
+        a {
+        font-weight: 500;
+        color: #000000;
+        }
+    }
+
+}
