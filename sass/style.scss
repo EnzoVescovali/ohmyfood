@@ -1,24 +1,12 @@
-@use 'variables';
-@use 'reset';
-@use 'buttons';
-@use 'navigation';
-@use 'footer';
-@use 'base';
-@use 'hero';
-@use 'fonctionnement.scss';
-@use 'cards';
+@use 'abstracts/variables.scss';
 
+@use 'base/base.scss';
+@use 'base/reset.scss';
 
+@use 'components/buttons.scss';
+@use 'components/cards.scss';
 
-
-
-
-
-
-
-
-
-
-img {
-    width: 130px;
-}
+@use 'layout/navigation.scss';
+@use 'layout/hero.scss';
+@use 'layout/fonctionnement.scss';
+@use 'layout/footer.scss';
