@@ -8,10 +8,14 @@
 @use 'components/_functioning-card.scss';
 @use 'components/_restaurant-card.scss';
 @use 'components/_grey-background.scss';
+@use 'components/_restaurants-padding.scss';
+@use 'components/dish-card.scss';
 
 @use 'layout/_home-nav.scss';
 @use 'layout/_home-hero.scss';
 @use 'layout/_functioning.scss';
-@use 'layout/_restaurants.scss';
 @use 'layout/_footer.scss';
-@use 'layout/_card-nav';
+@use 'layout/_dish-card-nav.scss';
+@use 'layout/_dish-card-layout.scss';
+@use 'layout/_dish-card-hero.scss';
+

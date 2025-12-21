@@ -1,0 +1,12 @@
+.dishCardHero {
+    position: relative;
+    height: 380px;
+    overflow: hidden;
+    padding: 0;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

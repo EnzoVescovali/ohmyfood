@@ -8,10 +8,8 @@ main > * {
     padding-inline: 1rem;
 }
 
-
-
 @include mixins.desktop {
-    section {
+    .homeSection {
         padding-inline: 153px;
     }
 }

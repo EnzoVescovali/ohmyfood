@@ -1,0 +1,12 @@
+.dishInfos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dishCard {
+    background-color: #fff;
+    margin-block-end: 2rem;
+    box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 15px;   
+}
