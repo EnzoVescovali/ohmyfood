@@ -1,5 +1,5 @@
-@use '../base/mixins.scss';
-@use '../base/variables.scss';
+@use '../abstracts/_mixins.scss';
+@use '../abstracts/_variables.scss';
 
 .restaurantCard {
     border-radius: 15px;

@@ -1,15 +1,17 @@
-@use 'base/base.scss';
-@use 'base/reset.scss';
-@use 'base/mixins.scss';
-@use 'base/variables.scss';
+@use 'abstracts/_variables.scss';
+@use 'abstracts/_mixins.scss';
 
-@use 'components/buttons.scss';
-@use 'components/functioning-card.scss';
-@use 'components/restaurant-card.scss';
-@use 'components/grey.scss';
+@use 'base/_base.scss';
+@use 'base/_reset.scss';
 
-@use 'layout/navigation.scss';
-@use 'layout/hero.scss';
-@use 'layout/functioning.scss';
-@use 'layout/restaurants.scss';
-@use 'layout/footer.scss';
+@use 'components/_buttons.scss';
+@use 'components/_functioning-card.scss';
+@use 'components/_restaurant-card.scss';
+@use 'components/_grey-background.scss';
+
+@use 'layout/_home-nav.scss';
+@use 'layout/_home-hero.scss';
+@use 'layout/_functioning.scss';
+@use 'layout/_restaurants.scss';
+@use 'layout/_footer.scss';
+@use 'layout/_card-nav';
