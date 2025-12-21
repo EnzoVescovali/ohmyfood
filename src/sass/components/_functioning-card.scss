@@ -3,19 +3,21 @@
 ol {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
+    list-style: none; 
+    justify-content: center;  
+    padding-inline: 1rem; 
 
     li {
-        padding-block: 1.5rem;
+        
         background-color: #f6f6f6;
         box-shadow: 0px 4px 15px 0px #00000026;
         border-radius: 20px;
-        position: relative;
-        max-width: 322px;
+        text-align: center;
+        padding: 1.5rem;
 
         i {
             color: #7E7E7E;
-            padding-inline: 2.2rem;
         }
     }
 }
@@ -23,6 +25,11 @@ ol {
 @include mixins.desktop {
     ol {
         flex-direction: row;
-        gap: 1rem;
+        gap: clamp(2rem, 1vw, 3rem);
+       
+        li {
+             min-width: 300px;
+             width: 335px;
+        }
     }
 }
