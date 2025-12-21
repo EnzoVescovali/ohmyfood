@@ -1,0 +1,17 @@
+@use '../base/mixins.scss';
+
+html {
+    font-family: 'roboto';
+}
+
+main > * {
+    padding-inline: 1rem;
+}
+
+
+
+@include mixins.desktop {
+    section {
+        padding-inline: 153px;
+    }
+}
