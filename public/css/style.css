@@ -1,0 +1,285 @@
+.fa-heart:checked {
+  background-color: red;
+}
+
+html {
+  font-family: "roboto";
+  scroll-behavior: smooth;
+}
+
+main > * {
+  padding-inline: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .homeSection {
+    padding-inline: 153px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+.mainBtn {
+  background: linear-gradient(193.33deg, #e12be7 -11.44%, #56026b 123.93%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  border-radius: 25px;
+  border: none;
+  padding: 1rem 3rem;
+  color: #fff;
+  font-weight: 500;
+  font-family: "roboto";
+  font-size: 1rem;
+  display: block;
+  width: fit-content;
+  margin: 3rem auto 0;
+}
+
+ol {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+  justify-content: center;
+  padding-inline: 1rem;
+}
+ol li {
+  background-color: #f6f6f6;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  border-radius: 20px;
+  text-align: center;
+  padding: 1.5rem;
+}
+ol li i {
+  color: #7E7E7E;
+}
+
+@media (min-width: 1024px) {
+  ol {
+    flex-direction: row;
+    gap: clamp(2rem, 1vw, 3rem);
+  }
+  ol li {
+    min-width: 300px;
+    width: 335px;
+  }
+}
+.cardsContainer {
+  display: grid;
+  gap: 2rem 5rem;
+  margin-block-start: 1rem;
+}
+
+.restaurantCard {
+  border-radius: 15px;
+  background-color: #fff;
+  position: relative;
+}
+.restaurantCard img {
+  object-fit: cover;
+  width: 100%;
+  height: 180px;
+  border-radius: 15px 15px 0 0;
+}
+.restaurantCard span {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #008766;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: #99e2d0;
+  border-radius: 2px;
+  padding: 0.38rem 0.77rem;
+}
+.restaurantCard i {
+  font-size: 1.1rem;
+  z-index: 2;
+}
+.restaurantCard .cardLink {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+}
+.restaurantCard div {
+  padding-block: 0.3rem;
+  margin-inline: 0.7rem;
+}
+.restaurantCard .fa-solid {
+  -webkit-text-stroke: 2px black;
+  color: transparent;
+}
+
+.cardContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #000;
+}
+
+@media (min-width: 1024px) {
+  .cardsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.grey {
+  background-color: #f6f6f6;
+}
+
+.restaurants {
+  padding-block: 2rem;
+}
+
+.dishInfos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dishCard {
+  background-color: #fff;
+  margin-block-end: 2rem;
+  box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+nav img {
+  width: 137px;
+  margin: auto;
+  padding-block: 1rem;
+}
+nav div {
+  display: flex;
+  justify-content: center;
+  background-color: #eaeaea;
+  padding: 0.5rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 2rem 3rem;
+  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.hero p {
+  width: 32ch;
+}
+.hero * {
+  margin: 0;
+}
+
+.functioning {
+  padding-block: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+.functioning h2 {
+  margin-block-end: 2rem;
+  margin-inline-start: 1rem;
+}
+
+footer {
+  background-color: #353535;
+  padding: 1rem;
+}
+footer img {
+  margin-block-end: 1.5rem;
+  width: 140px;
+  filter: brightness(0) invert(1);
+}
+footer li {
+  list-style-type: none;
+  margin-block-end: 0.4rem;
+}
+footer a {
+  color: #fff;
+}
+
+@media (min-width: 1024px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 5rem;
+    align-items: center;
+  }
+  footer img {
+    padding-inline-end: 1rem;
+    padding-block-start: 1rem;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+.dishNav {
+  display: flex;
+  align-items: center;
+  padding-inline: 1rem;
+}
+.dishNav i {
+  color: #353535;
+}
+
+.dishPageContainer {
+  background-color: #f6f6f6;
+  border-radius: 40px 40px 0 0;
+  max-width: 1055px;
+  margin: auto;
+  position: relative;
+  margin-top: -3rem;
+  padding-block-end: 2rem;
+}
+.dishPageContainer h1 {
+  padding-block: 5rem;
+  text-align: center;
+  font-family: "Shrikhand";
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+.dishPageContainer h2 {
+  font-weight: 300;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.dishPageContainer h2::after {
+  content: "";
+  display: block;
+  background-color: #99e2d0;
+  height: 3px;
+  width: 40px;
+  margin-block: 0.3rem 1rem;
+}
+
+.dishCardsContainer {
+  max-width: 634px;
+  margin: auto;
+}
+
+.dishCardHero {
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+  padding: 0;
+}
+.dishCardHero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
