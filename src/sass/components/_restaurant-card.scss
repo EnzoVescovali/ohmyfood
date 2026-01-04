@@ -1,6 +1,12 @@
 @use '../abstracts/_mixins.scss';
 @use '../abstracts/_variables.scss';
 
+.cardsContainer {
+    display: grid;
+    gap: 2rem 5rem;
+    margin-block-start: 1rem;
+}
+
 .restaurantCard {
     border-radius: 15px;
     background-color: #fff;
@@ -27,12 +33,23 @@
 
     i {
         font-size: 1.1rem;
-        
+        z-index: 2;   
+    }
+
+    .cardLink {
+        position: absolute;
+        z-index: 1;
+        inset: 0;
     }
 
     div {
         padding-block: .3rem;
         margin-inline: .7rem;
+    }
+
+    .fa-solid {
+        -webkit-text-stroke: 2px black;
+        color: transparent;
     }
 }
 
@@ -41,12 +58,6 @@
     align-items: center;
     justify-content: space-between;   
     color: #000; 
-}
-
-.cardsContainer {
-    display: grid;
-    gap: 2rem 5rem;
-    margin-block-start: 1rem;
 }
 
 @include mixins.desktop {
