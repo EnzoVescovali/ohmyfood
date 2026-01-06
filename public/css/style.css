@@ -1,7 +1,78 @@
-.fa-heart:checked {
-  background-color: red;
+.fa-heart:hover {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0px !important;
+  transition: all 0.3s;
 }
 
+.dishCard {
+  position: relative;
+}
+
+.dishCard::after {
+  content: "";
+  width: 0px;
+  height: 100%;
+  background: #99E2D0;
+  display: block;
+  position: absolute;
+  inset: 0 0 0 auto;
+  transition: all 0.3s ease-in;
+  border-radius: 0 15px 15px 0;
+}
+
+.price {
+  transition: all 0.3s ease-in;
+}
+
+.fa-check {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  z-index: -1;
+  color: white;
+  transition: ease-in 0.25s;
+  transform: translateY(-50%);
+  font-size: 0;
+}
+
+.dishCard:hover .fa-check {
+  z-index: 3;
+  font-size: 1rem;
+  color: #99E2D0;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-flex; /* permet de centrer le contenu */
+  justify-content: center;
+  align-items: center;
+}
+
+.dishCard:hover .price {
+  transform: translateX(-70px);
+}
+
+.dishCard:hover::after {
+  width: 70px;
+}
+
+nav,
+body {
+  animation: enter 1s ease-out;
+}
+
+@keyframes enter {
+  from {
+    transform: translateY(-100px);
+    opacity: 0%;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 100%;
+  }
+}
 html {
   font-family: "roboto";
   scroll-behavior: smooth;
@@ -34,7 +105,7 @@ svg {
 }
 
 .mainBtn {
-  background: linear-gradient(193.33deg, #e12be7 -11.44%, #56026b 123.93%);
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   border-radius: 25px;
   border: none;
@@ -119,8 +190,9 @@ ol li i {
   margin-inline: 0.7rem;
 }
 .restaurantCard .fa-solid {
-  -webkit-text-stroke: 2px black;
+  -webkit-text-stroke: 1.5px black;
   color: transparent;
+  transition: 1s;
 }
 
 .cardContent {

@@ -1,0 +1,60 @@
+.fa-heart:hover {
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 0px !important;
+    transition: all 0.3s;
+}
+
+.dishCard {
+    position: relative;
+    // overflow: hidden;
+}
+
+.dishCard::after {
+        content: "";
+        width: 0px;
+        height: 100%;
+        background: #99E2D0;
+        display: block;
+        position: absolute;
+        inset: 0 0 0 auto;
+        transition: all 0.3s ease-in;
+        border-radius:  0 15px 15px 0;
+}
+
+.price {
+    transition: all 0.3s ease-in;
+}
+
+.fa-check {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    z-index: -1;
+    color: white;
+    transition:  ease-in 0.25s;
+    transform: translateY(-50%);
+    font-size: 0;
+}
+
+.dishCard:hover .fa-check{
+    z-index: 3;
+    font-size: 1rem;
+    color: #99E2D0;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+     display: inline-flex;             /* permet de centrer le contenu */
+    justify-content: center; 
+    align-items: center;
+}
+
+.dishCard:hover .price {
+    transform: translateX(-70px);
+}
+
+.dishCard:hover::after{
+    width: 70px;
+}

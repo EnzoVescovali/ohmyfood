@@ -1,6 +1,8 @@
 @use 'abstracts/_variables.scss';
 @use 'abstracts/_mixins.scss';
 @use 'abstracts/animations.scss';
+@use 'abstracts/loading-animation';
+
 
 @use 'base/_base.scss';
 @use 'base/_reset.scss';
