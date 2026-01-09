@@ -6,7 +6,8 @@ ol {
     gap: 2rem;
     list-style: none; 
     justify-content: center;  
-    padding-inline: 1rem; 
+    padding-inline: 1rem;
+    counter-reset: count; 
 
     li {
         
@@ -15,9 +16,33 @@ ol {
         border-radius: 20px;
         text-align: center;
         padding: 1.5rem;
+        position: relative;
+        display: grid;
+          grid-template-columns: auto 1fr auto;
+        align-items: center;
+
+        ::after {
+                counter-increment: count;
+                content: counter(count);
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                padding: .2rem;
+                color: white;
+                font-size: .9rem;
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #9356DC;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
 
         i {
-            color: #7E7E7E;
+            color: #7E7E7E; 
         }
     }
 }
