@@ -7,6 +7,7 @@
 
 .dishCard {
   position: relative;
+  overflow: hidden;
 }
 
 .dishCard::after {
@@ -58,9 +59,12 @@
   width: 70px;
 }
 
-nav,
-body {
+nav {
   animation: enter 1s ease-out;
+}
+
+.slideL {
+  animation: slideL 1s ease-out;
 }
 
 @keyframes enter {
@@ -71,6 +75,60 @@ body {
   to {
     transform: translateY(0);
     opacity: 100%;
+  }
+}
+@keyframes slideL {
+  from {
+    transform: translateX(-100px);
+    opacity: 0%;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+.loader {
+  width: 70px;
+  height: 70px;
+  border: 6px solid #ddd;
+  border-top-color: #9356DC;
+  border-radius: 50%;
+  animation: spin 2s linear forwards;
+}
+
+.loaderWrapper {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  z-index: 10;
+  animation: wrapper 2s linear forwards;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(720deg);
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes wrapper {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
   }
 }
 html {
@@ -126,6 +184,7 @@ ol {
   list-style: none;
   justify-content: center;
   padding-inline: 1rem;
+  counter-reset: count;
 }
 ol li {
   background-color: #f6f6f6;
@@ -133,6 +192,29 @@ ol li {
   border-radius: 20px;
   text-align: center;
   padding: 1.5rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+ol li ::after {
+  counter-increment: count;
+  content: counter(count);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  padding: 0.2rem;
+  color: white;
+  font-size: 0.9rem;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #9356DC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 ol li i {
   color: #7E7E7E;
@@ -219,6 +301,16 @@ ol li i {
   display: flex;
   justify-content: space-between;
 }
+.dishInfos p:first-child {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.price {
+  position: relative;
+  z-index: 2;
+}
 
 .dishCard {
   background-color: #fff;
@@ -226,6 +318,7 @@ ol li i {
   box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   border-radius: 15px;
+  position: relative;
 }
 
 nav img {

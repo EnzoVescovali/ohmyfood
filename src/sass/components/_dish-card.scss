@@ -1,6 +1,17 @@
 .dishInfos {
     display: flex;
     justify-content: space-between;
+
+    p:first-child {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    }
+}
+
+.price {
+  position: relative;
+  z-index: 2;
 }
 
 .dishCard {
@@ -9,4 +20,5 @@
     box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     border-radius: 15px; 
+    position: relative;
 }

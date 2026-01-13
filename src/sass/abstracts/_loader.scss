@@ -1,0 +1,50 @@
+.loader {
+    width: 70px;
+    height: 70px;
+    border: 6px solid #ddd;
+    border-top-color: #9356DC;
+    border-radius: 50%;
+    animation: spin 2s linear forwards;
+}
+
+.loaderWrapper {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  z-index: 10;
+    animation: wrapper 2s linear forwards;
+}
+
+@keyframes spin {
+
+    0% {
+        transform: rotate(720deg);
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes wrapper {
+  0% {
+    opacity: 1;
+  }
+
+  99% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
