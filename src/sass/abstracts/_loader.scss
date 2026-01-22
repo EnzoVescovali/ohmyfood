@@ -1,10 +1,10 @@
 .loader {
-    width: 70px;
-    height: 70px;
-    border: 6px solid #ddd;
-    border-top-color: #9356DC;
-    border-radius: 50%;
-    animation: spin 2s linear forwards;
+  width: 70px;
+  height: 70px;
+  border: 6px solid #ddd;
+  border-top-color: #9356DC;
+  border-radius: 50%;
+  animation: spin 2s linear forwards;
 }
 
 .loaderWrapper {
@@ -15,7 +15,7 @@
   justify-content: center;
   background: white;
   z-index: 10;
-    animation: wrapper 2s linear forwards;
+  animation: wrapper 2s linear forwards;
 }
 
 @keyframes spin {
@@ -25,7 +25,7 @@
         opacity: 1;
     }
 
-    99% {
+    70% {
         opacity: 1;
     }
 
@@ -39,7 +39,7 @@
     opacity: 1;
   }
 
-  99% {
+  70% {
     opacity: 1;
   }
 
@@ -48,3 +48,4 @@
     pointer-events: none;
   }
 }
+

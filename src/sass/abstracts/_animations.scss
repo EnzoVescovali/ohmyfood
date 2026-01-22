@@ -1,29 +1,34 @@
+// animation coeur
 .fa-heart:hover {
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     -webkit-background-clip: text;
     -webkit-text-stroke: 0px !important;
-    transition: all 0.3s;
 }
 
+// animation buttons
+.mainBtn:hover {
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  box-shadow: 0px 4px 15px 0px #00000059;
+}
+
+// animation cartes plats restaurants
 .dishCard {
-    position: relative;
-    overflow: hidden;
-}
-
-.dishCard::after {
-        content: "";
-        width: 0px;
-        height: 100%;
-        background: #99E2D0;
-        display: block;
-        position: absolute;
-        inset: 0 0 0 auto;
-        transition: all 0.3s ease-in;
-        border-radius:  0 15px 15px 0;
-}
-
-.price {
+  overflow: hidden;
+  padding-right: 1rem;
+  transition: padding-right 0.3s ease-in;
+  
+  &::after {
+    content: "";
+    width: 0px;
+    height: 100%;
+    background: #99E2D0;
+    display: block;
+    position: absolute;
+    inset: 0 0 0 auto;
     transition: all 0.3s ease-in;
+    border-radius:  0 15px 15px 0;
+  }
 }
 
 .fa-check {
@@ -46,15 +51,77 @@
     border-radius: 50%;
     width: 20px;
     height: 20px;
-     display: inline-flex;             /* permet de centrer le contenu */
+    display: inline-flex;     
     justify-content: center; 
     align-items: center;
 }
 
-.dishCard:hover .price {
-    transform: translateX(-70px);
-}
-
 .dishCard:hover::after{
     width: 70px;
+}
+
+.price {
+  flex-shrink: 0;
+  width: 3rem;
+  text-align: right;
+  transition: all 0.3s ease-in;
+}
+
+.dishCard:hover {
+  padding-right: 80px; 
+}
+
+.dishInfos p:first-child {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// animation chargement navbar
+.dishNav {
+    transform: translateY(-100px);
+    animation: nav 1s ease forwards;
+}
+
+@keyframes nav {
+  to {
+    transform: translateY(0);
+  }
+}
+
+// animation chargement plats
+.dishCard {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: cards 0.5s ease forwards;
+}
+
+@keyframes cards {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.dishCardsContainer .dishCard:nth-of-type(1) {
+  animation-delay: 0.2s;
+}
+
+.dishCardsContainer .dishCard:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+
+.dishCardsContainer .dishCard:nth-of-type(3) {
+  animation-delay: 0.6s;
+}
+
+.dishCardsContainer .dishCard:nth-of-type(4) {
+  animation-delay: 0.8s;
 }

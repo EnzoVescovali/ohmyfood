@@ -1,11 +1,12 @@
 .dishInfos {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     p:first-child {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
 }
 
