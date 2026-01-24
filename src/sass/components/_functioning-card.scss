@@ -21,7 +21,7 @@ ol {
         grid-template-columns: auto 1fr auto;
         align-items: center;
 
-        ::after {
+        &::after {
                 counter-increment: count;
                 content: counter(count);
                 width: 20px;
@@ -33,7 +33,7 @@ ol {
                 display: block;
                 position: absolute;
                 left: 0;
-                    top: 50%;
+                top: 50%;
                 transform: translate(-50%, -50%);
                 background-color: #9356DC;
                 display: flex;

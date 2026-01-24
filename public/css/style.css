@@ -30,10 +30,10 @@
   position: absolute;
   right: 20px;
   top: 50%;
+  transform: translateY(-50%);
   z-index: -1;
   color: white;
   transition: ease-in 0.25s;
-  transform: translateY(-50%);
   font-size: 0;
 }
 
@@ -227,7 +227,7 @@ ol li {
   grid-template-columns: auto 1fr auto;
   align-items: center;
 }
-ol li ::after {
+ol li::after {
   counter-increment: count;
   content: counter(count);
   width: 20px;
